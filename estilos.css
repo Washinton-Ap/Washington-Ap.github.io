@@ -1,0 +1,810 @@
+/* Elimina márgenes y padding por defecto de todos los elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Incluye padding y border en el tamaño total */
+}
+
+/* Scroll suave al hacer clic en enlaces ancla */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Estilos generales del body */
+body {
+    font-family: Arial, sans-serif; /* Fuente principal */
+    line-height: 1.6; /* Altura de línea para mejor legibilidad */
+    color: #1e293b; /* Color de texto principal */
+    background-color: #f8fafc; /* Color de fondo de la página */
+}
+
+/* ===================================
+   ENCABEZADO Y NAVEGACIÓN
+   =================================== */
+
+/* Estilos del header (encabezado) */
+header {
+    background-color: #1e3a8a; /* Color azul oscuro */
+    color: white;
+    padding: 1rem 0; /* Espaciado vertical */
+    position: sticky; /* Se queda fijo al hacer scroll */
+    top: 0; /* Posición en la parte superior */
+    z-index: 1000; /* Aparece sobre otros elementos */
+    box-shadow: 0 2px 8px rgba(30, 58, 138, 0.3); /* Sombra */
+}
+
+/* Contenedor de la navegación */
+nav {
+    max-width: 1200px; /* Ancho máximo */
+    margin: 0 auto; /* Centrado horizontal */
+    display: flex; /* Diseño flexible */
+    justify-content: space-between; /* Espacio entre elementos */
+    align-items: center; /* Alineación vertical */
+    padding: 0 20px; /* Espaciado horizontal */
+    position: relative;
+}
+
+/* Logo de la tienda */
+.logo {
+    font-size: 1.8rem; /* Tamaño de fuente grande */
+    font-weight: 700; /* Negrita */
+    letter-spacing: 1px; /* Espaciado entre letras */
+    color: #ffffff;
+    z-index: 1001; /* Aparece sobre el menú */
+}
+
+/* Oculta el checkbox del menú hamburguesa */
+#menu-toggle {
+    display: none;
+}
+
+/* Icono del menú hamburguesa (3 líneas) */
+.menu-icon {
+    display: none; /* Oculto por defecto (se muestra en móviles) */
+    flex-direction: column;
+    cursor: pointer; /* Cursor de mano al pasar */
+    z-index: 1001;
+}
+
+/* Cada línea del icono hamburguesa */
+.menu-icon span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+    transition: 0.3s; /* Animación suave */
+    border-radius: 3px;
+}
+
+/* Lista del menú de navegación */
+nav .menu {
+    list-style: none; /* Sin viñetas */
+    display: flex; /* Elementos en línea */
+    gap: 30px; /* Espacio entre elementos */
+}
+
+/* Enlaces del menú */
+nav .menu a {
+    color: #e0e7ff; /* Color azul claro */
+    text-decoration: none; /* Sin subrayado */
+    transition: color 0.3s ease; /* Transición suave */
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+/* Efecto hover en los enlaces del menú */
+nav .menu a:hover {
+    color: #ffffff; /* Blanco al pasar el mouse */
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
+}
+
+/* ===================================
+   SECCIÓN HERO (BANNER PRINCIPAL)
+   =================================== */
+
+/* Sección principal de bienvenida */
+.hero {
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); /* Degradado azul */
+    color: white;
+    text-align: center; /* Texto centrado */
+    padding: 120px 20px; /* Espaciado grande */
+    margin-bottom: 60px;
+}
+
+/* Título principal del hero */
+.hero-content h1 {
+    font-size: 3rem; /* Tamaño grande */
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+/* Párrafo del hero */
+.hero-content p {
+    font-size: 1.3rem;
+    margin-bottom: 35px;
+    opacity: 0.95; /* Ligeramente transparente */
+}
+
+/* ===================================
+   CONTENEDOR PRINCIPAL
+   =================================== */
+
+/* Contenedor que limita el ancho del contenido */
+.container {
+    max-width: 1200px; /* Ancho máximo */
+    margin: 0 auto; /* Centrado */
+    padding: 40px 20px; /* Espaciado interno */
+}
+
+/* ===================================
+   BOTONES
+   =================================== */
+
+/* Estilo base para todos los botones */
+.btn {
+    display: inline-block;
+    background-color: #2563eb; /* Azul */
+    color: white;
+    padding: 14px 32px; /* Espaciado interno */
+    text-decoration: none; /* Sin subrayado */
+    border-radius: 6px; /* Bordes redondeados */
+    transition: all 0.3s ease; /* Transición suave */
+    font-weight: 600;
+    border: none;
+    cursor: pointer; /* Cursor de mano */
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+/* Efecto hover en botones */
+.btn:hover {
+    background-color: #1e40af; /* Azul más oscuro */
+    transform: translateY(-2px); /* Levanta el botón */
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3); /* Sombra */
+}
+
+/* Botón de envío de formulario */
+.btn-submit {
+    width: 100%; /* Ancho completo */
+    font-size: 1rem;
+    padding: 16px;
+}
+
+/* Botón de pago */
+.btn-pagar {
+    background-color: #1e40af;
+}
+
+.btn-pagar:hover {
+    background-color: #1e3a8a;
+}
+
+/* Botón secundario */
+.btn-secundario {
+    background-color: #64748b; /* Gris */
+}
+
+.btn-secundario:hover {
+    background-color: #475569; /* Gris más oscuro */
+}
+
+/* ===================================
+   GRID DE PRODUCTOS
+   =================================== */
+
+/* Contenedor grid que se adapta automáticamente */
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Columnas automáticas */
+    gap: 30px; /* Espacio entre tarjetas */
+    margin: 40px 0;
+}
+
+/* Tarjeta individual de producto */
+.producto-card {
+    background: white;
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 8px rgba(30, 58, 138, 0.08); /* Sombra suave */
+    overflow: hidden; /* Oculta contenido que sobresale */
+    transition: all 0.3s ease;
+    border: 1px solid #e2e8f0;
+}
+
+/* Efecto hover en tarjetas de producto */
+.producto-card:hover {
+    transform: translateY(-4px); /* Levanta la tarjeta */
+    box-shadow: 0 8px 24px rgba(30, 58, 138, 0.15); /* Sombra más grande */
+    border-color: #3b82f6;
+}
+
+/* Contenedor de imagen del producto */
+.producto-img {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    background-color: #f1f5f9;
+}
+
+/* Imagen del producto */
+.producto-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen sin deformar */
+    transition: transform 0.3s ease;
+}
+
+/* Efecto zoom en imagen al hacer hover */
+.producto-card:hover .producto-img img {
+    transform: scale(1.05); /* Aumenta 5% el tamaño */
+}
+
+/* Información del producto */
+.producto-info {
+    padding: 24px;
+}
+
+/* Título del producto */
+.producto-info h3 {
+    margin-bottom: 10px;
+    color: #1e3a8a;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+/* Descripción del producto */
+.producto-info p {
+    color: #64748b;
+    margin-bottom: 16px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Precio del producto */
+.precio {
+    font-size: 1.6rem;
+    color: #1e40af; /* Azul */
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+/* ===================================
+   SOBRE NOSOTROS
+   =================================== */
+
+/* Contenedor con dos columnas */
+.sobre-nosotros {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+    gap: 50px; /* Espacio entre columnas */
+    align-items: center; /* Alineación vertical */
+    margin: 40px 0;
+}
+
+/* Contenedor de imagen */
+.sobre-imagen {
+    width: 100%;
+    height: 400px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(30, 58, 138, 0.1);
+    border: 1px solid #e2e8f0;
+}
+
+/* Imagen de sobre nosotros */
+.sobre-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Títulos en la sección sobre nosotros */
+.sobre-texto h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #1e3a8a;
+    font-weight: 600;
+}
+
+/* Párrafos en sobre nosotros */
+.sobre-texto p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+    color: #475569;
+}
+
+/* Lista de valores */
+.sobre-texto ul {
+    list-style: none; /* Sin viñetas predeterminadas */
+    padding-left: 0;
+}
+
+/* Elementos de la lista */
+.sobre-texto ul li {
+    margin-bottom: 12px;
+    padding-left: 28px; /* Espacio para el icono */
+    position: relative;
+    color: #475569;
+    line-height: 1.6;
+}
+
+/* Icono check antes de cada elemento */
+.sobre-texto ul li:before {
+    content: "✓"; /* Símbolo de check */
+    position: absolute;
+    left: 0;
+    color: #2563eb; /* Azul */
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Grid de misión y visión */
+.mision-vision {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+/* Tarjetas de información */
+.card-info {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(30, 58, 138, 0.08);
+    border: 1px solid #e2e8f0;
+}
+
+/* Títulos en tarjetas */
+.card-info h3 {
+    color: #1e3a8a;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+/* Texto en tarjetas */
+.card-info p {
+    color: #475569;
+    line-height: 1.8;
+}
+
+/* ===================================
+   FORMULARIO DE CONTACTO
+   =================================== */
+
+/* Contenedor del formulario */
+.formulario {
+    max-width: 700px;
+    margin: 40px auto; /* Centrado */
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(30, 58, 138, 0.08);
+    border: 1px solid #e2e8f0;
+}
+
+/* Grupo de campos del formulario */
+.form-group {
+    margin-bottom: 24px; /* Espacio entre campos */
+}
+
+/* Etiquetas de los campos */
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #1e3a8a;
+    font-size: 0.95rem;
+}
+
+/* Campos de entrada y textarea */
+.form-group input,
+.form-group textarea {
+    width: 100%; /* Ancho completo */
+    padding: 12px 16px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-family: inherit; /* Hereda la fuente */
+    transition: all 0.3s ease;
+    background-color: #f8fafc;
+}
+
+/* Efecto focus en campos de formulario */
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none; /* Quita el borde por defecto */
+    border-color: #3b82f6; /* Borde azul */
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1); /* Sombra azul */
+}
+
+/* Textarea específico */
+.form-group textarea {
+    resize: vertical; /* Solo se puede redimensionar verticalmente */
+    min-height: 140px; /* Altura mínima */
+}
+
+/* ===================================
+   INFORMACIÓN DE CONTACTO
+   =================================== */
+
+/* Contenedor de información de contacto */
+.info-contacto {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 40px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(30, 58, 138, 0.08);
+    border: 1px solid #e2e8f0;
+}
+
+/* Título de información de contacto */
+.info-contacto h3 {
+    margin-bottom: 30px;
+    color: #1e3a8a;
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* Detalles de contacto */
+.contacto-detalles {
+    margin-bottom: 32px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid #e2e8f0; /* Línea separadora */
+}
+
+/* Cada item de contacto */
+.contacto-item {
+    margin-bottom: 20px;
+}
+
+/* Etiquetas en negrita */
+.contacto-item strong {
+    display: block;
+    color: #1e3a8a;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+/* Texto de contacto */
+.contacto-item p {
+    color: #475569;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* Información del equipo */
+.equipo-info {
+    text-align: center;
+}
+
+/* Título del equipo */
+.equipo-info h4 {
+    color: #1e3a8a;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* Lista del equipo */
+.equipo-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Miembros del equipo */
+.equipo-info ul li {
+    margin-bottom: 10px;
+    color: #475569;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* ===================================
+   CARRITO DE COMPRAS
+   =================================== */
+
+/* Contenedor de productos en carrito */
+.carrito-contenido {
+    margin-bottom: 30px;
+}
+
+/* Item individual en el carrito */
+.carrito-item {
+    background: white;
+    padding: 24px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(30, 58, 138, 0.08);
+    display: flex;
+    justify-content: space-between; /* Espacio entre elementos */
+    align-items: center;
+    border: 1px solid #e2e8f0;
+    flex-wrap: wrap; /* Se adapta en pantallas pequeñas */
+    gap: 20px;
+}
+
+/* Información del producto en carrito */
+.carrito-producto {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex: 1; /* Ocupa el espacio disponible */
+    min-width: 250px;
+}
+
+/* Imagen miniatura en carrito */
+.carrito-producto img {
+    width: 100px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid #e2e8f0;
+    flex-shrink: 0; /* No se encoge */
+}
+
+/* Título del producto en carrito */
+.carrito-detalles h3 {
+    color: #1e3a8a;
+    margin-bottom: 6px;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/* Descripción del producto en carrito */
+.carrito-detalles p {
+    color: #64748b;
+    font-size: 0.9rem;
+    margin: 4px 0;
+}
+
+/* Cantidad del producto */
+.carrito-detalles .cantidad {
+    font-weight: 600;
+    color: #475569;
+}
+
+/* Acciones del carrito (precio y eliminar) */
+.carrito-acciones {
+    text-align: right;
+}
+
+/* Enlace para eliminar producto */
+.eliminar {
+    color: #dc2626; /* Rojo */
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    display: inline-block;
+    transition: color 0.3s ease;
+    font-weight: 600;
+}
+
+/* Hover en eliminar */
+.eliminar:hover {
+    color: #991b1b; /* Rojo más oscuro */
+    text-decoration: underline;
+}
+
+/* Contenedor del resumen */
+.carrito-resumen {
+    max-width: 500px;
+    margin: 40px auto 0;
+}
+
+/* Caja del total */
+.carrito-total {
+    background: white;
+    padding: 32px;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(30, 58, 138, 0.1);
+    border: 2px solid #3b82f6;
+}
+
+/* Cada línea del total */
+.total-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e2e8f0;
+    color: #475569;
+    font-size: 1rem;
+}
+
+/* Texto de envío gratis */
+.envio-gratis {
+    color: #16a34a; /* Verde */
+    font-weight: 700;
+}
+
+/* Total final */
+.total-final {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px solid #1e3a8a;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #1e3a8a;
+}
+
+/* Precio final grande */
+.precio-final {
+    color: #1e40af;
+    font-size: 1.8rem;
+}
+
+/* Contenedor de botones del carrito */
+.botones-carrito {
+    display: flex;
+    flex-direction: column; /* Botones en columna */
+    gap: 15px;
+    margin-top: 25px;
+}
+
+/* ===================================
+   PIE DE PÁGINA (FOOTER)
+   =================================== */
+
+/* Footer */
+footer {
+    background-color: #1e3a8a;
+    color: white;
+    padding: 40px 20px 30px;
+    margin-top: 80px; /* Separación del contenido */
+}
+
+/* Contenido del footer */
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Copyright */
+.footer-copyright {
+    text-align: center;
+}
+
+/* Párrafos del footer */
+.footer-copyright p {
+    margin: 6px 0;
+    opacity: 0.9;
+    font-size: 0.95rem;
+    color: #e0e7ff;
+}
+
+/* ===================================
+   TÍTULOS PRINCIPALES
+   =================================== */
+
+/* Títulos h2 */
+h2 {
+    color: #1e3a8a;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+/* ===================================
+   RESPONSIVE - TABLETS (768px o menos)
+   =================================== */
+
+@media (max-width: 768px) {
+    /* Muestra el icono hamburguesa */
+    .menu-icon {
+        display: flex;
+    }
+    
+    /* Menú móvil */
+    nav .menu {
+        position: fixed; /* Posición fija */
+        left: -100%; /* Oculto a la izquierda */
+        top: 70px;
+        flex-direction: column; /* Elementos en columna */
+        background-color: #1e3a8a;
+        width: 100%; /* Ancho completo */
+        text-align: center;
+        transition: 0.3s; /* Animación suave */
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.3);
+        padding: 20px 0;
+        gap: 0;
+    }
+    
+    /* Elementos del menú móvil */
+    nav .menu li {
+        margin: 0;
+    }
+    
+    /* Enlaces del menú móvil */
+    nav .menu a {
+        display: block;
+        padding: 15px;
+    }
+    
+    /* Muestra el menú cuando el checkbox está marcado */
+    #menu-toggle:checked ~ .menu {
+        left: 0; /* Aparece desde la izquierda */
+    }
+    
+    /* Animación del icono hamburguesa cuando está activo */
+    #menu-toggle:checked ~ .menu-icon span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    
+    #menu-toggle:checked ~ .menu-icon span:nth-child(2) {
+        opacity: 0; /* Línea del medio desaparece */
+    }
+    
+    #menu-toggle:checked ~ .menu-icon span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+    
+    /* Hero más pequeño en tablets */
+    .hero {
+        padding: 80px 20px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+    
+    /* Sobre nosotros en una columna */
+    .sobre-nosotros {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Productos en columnas más pequeñas */
+    .productos-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    
+    /* Carrito en columna */
+    .carrito-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .carrito-producto {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .carrito-acciones {
+        text-align: center;
+    }
+    
+    /* Títulos más pequeños */
+    h2 {
+        font-size: 2rem;
+    }
+    
+    /* Formularios con menos padding */
+    .formulario,
+    .info-contacto {
+        padding: 30px 20px;
+    }
+    
+    /* Misión y visión en una columna */
+    .mision-vision {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===================================
+   RESPONSIVE - MÓVILES (480px o menos)
+   =================================== */
+
+@media (max-width: 480px) {
+    /* Hero aún

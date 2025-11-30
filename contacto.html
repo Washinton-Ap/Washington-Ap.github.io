@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Configuración básica del documento -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore - Contacto</title>
+    <!-- Enlace al archivo de estilos CSS -->
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <!-- ========== ENCABEZADO Y MENÚ DE NAVEGACIÓN ========== -->
+    <header>
+        <nav>
+            <!-- Logo de la tienda -->
+            <div class="logo">TechStore</div>
+            
+            <!-- Checkbox oculto para el menú hamburguesa -->
+            <input type="checkbox" id="menu-toggle">
+            
+            <!-- Icono del menú hamburguesa -->
+            <label for="menu-toggle" class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            
+            <!-- Lista de enlaces del menú -->
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="sobreNosotros.html">Sobre Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="carrito.html">Carrito (3)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ========== SECCIÓN DE CONTACTO ========== -->
+    <section class="container">
+        <h2>Contáctanos</h2>
+        
+        <!-- ========== FORMULARIO DE CONTACTO ========== -->
+        <div class="formulario">
+            <!-- Formulario con método POST -->
+            <form action="#" method="post">
+                
+                <!-- Campo: Nombre completo -->
+                <div class="form-group">
+                    <label for="nombre">Nombre Completo</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre completo" required>
+                </div>
+                
+                <!-- Campo: Email -->
+                <div class="form-group">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+                </div>
+                
+                <!-- Campo: Teléfono (opcional) -->
+                <div class="form-group">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="+593 99 999 9999">
+                </div>
+                
+                <!-- Campo: Asunto -->
+                <div class="form-group">
+                    <label for="asunto">Asunto</label>
+                    <input type="text" id="asunto" name="asunto" placeholder="Motivo de su consulta" required>
+                </div>
+                
+                <!-- Campo: Mensaje -->
+                <div class="form-group">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" placeholder="Escriba su mensaje aquí..." required></textarea>
+                </div>
+                
+                <!-- Botón de envío -->
+                <button type="submit" class="btn btn-submit">
+                    Enviar Mensaje
+                </button>
+            </form>
+        </div>
+        
+        <!-- ========== INFORMACIÓN DE CONTACTO ========== -->
+        <div class="info-contacto">
+            <h3>Información de Contacto</h3>
+            
+            <!-- Detalles de contacto -->
+            <div class="contacto-detalles">
+                
+                <!-- Email -->
+                <div class="contacto-item">
+                    <strong>Email:</strong>
+                    <p>aguizadov@uteq.edu.ec</p>
+                </div>
+                
+                <!-- Teléfono -->
+                <div class="contacto-item">
+                    <strong>Teléfono:</strong>
+                    <p>+593 99 613 7839</p>
+                </div>
+                
+                <!-- Dirección física -->
+                <div class="contacto-item">
+                    <strong>Dirección:</strong>
+                    <p>Av. Quito km. 1 1/2 vía a Santo Domingo de los Tsáchilas</p>
+                    <p>Quevedo, Ecuador</p>
+                </div>
+                
+                <!-- Horario de atención -->
+                <div class="contacto-item">
+                    <strong>Horario de Atención:</strong>
+                    <p>Lunes a Viernes: 8:00 AM - 6:00 PM</p>
+                    <p>Sábados: 9:00 AM - 2:00 PM</p>
+                </div>
+            </div>
+            
+            <!-- ========== INFORMACIÓN DEL EQUIPO ========== -->
+            <div class="equipo-info">
+                <h4>EQUIPO C</h4>
+                <!-- Lista de integrantes del equipo -->
+                <ul>
+                    <li>APUNTE PAZMIÑO WASHINGTON GERMAN</li>
+                    <li>GARCIA SALTOS DIEGO FERNANDO</li>
+                    <li>GUIZADO VERDEZOTO ADRIAN JOEL</li>
+                    <li>PACA PILATAZA LUIS ALBERTO</li>
+                    <li>SANCHEZ VERA DARWIN JOEL</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PIE DE PÁGINA ========== -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-copyright">
+                <p>&copy; 2025 TechStore. Todos los derechos reservados.</p>
+                <p>Quevedo, Ecuador</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

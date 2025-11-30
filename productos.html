@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Configuración básica del documento -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore - Productos</title>
+    <!-- Enlace al archivo de estilos CSS -->
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <!-- ========== ENCABEZADO Y MENÚ DE NAVEGACIÓN ========== -->
+    <header>
+        <nav>
+            <!-- Logo de la tienda -->
+            <div class="logo">TechStore</div>
+            
+            <!-- Checkbox oculto para el menú hamburguesa -->
+            <input type="checkbox" id="menu-toggle">
+            
+            <!-- Icono del menú hamburguesa -->
+            <label for="menu-toggle" class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            
+            <!-- Lista de enlaces del menú -->
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="sobreNosotros.html">Sobre Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="carrito.html">Carrito (3)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ========== CATÁLOGO COMPLETO DE PRODUCTOS ========== -->
+    <section class="container">
+        <h2>Nuestro Catálogo Completo</h2>
+        
+        <!-- Grid de productos -->
+        <div class="productos-grid">
+            
+            <!-- Producto 1: Laptop -->
+            <div class="producto-card">
+                <div class="producto-img">
+                    <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400&h=300&fit=crop" alt="Laptop Pro 15">
+                </div>
+                <div class="producto-info">
+                    <h3>Laptop Pro 15"</h3>
+                    <p>Intel i7, 16GB RAM, 512GB SSD</p>
+                    <div class="precio">$1,299.99</div>
+                    <a href="carrito.html" class="btn">Agregar al Carrito</a>
+                </div>
+            </div>
+            
+            <!-- Producto 2: Smartphone -->
+            <div class="producto-card">
+                <div class="producto-img">
+                    <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400&h=300&fit=crop" alt="Smartphone X12">
+                </div>
+                <div class="producto-info">
+                    <h3>Smartphone X12</h3>
+                    <p>128GB, Cámara 48MP, 5G</p>
+                    <div class="precio">$899.99</div>
+                    <a href="carrito.html" class="btn">Agregar al Carrito</a>
+                </div>
+            </div>
+            
+            <!-- Producto 3: Auriculares -->
+            <div class="producto-card">
+                <div class="producto-img">
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=300&fit=crop" alt="Auriculares Premium">
+                </div>
+                <div class="producto-info">
+                    <h3>Auriculares Premium</h3>
+                    <p>Cancelación de ruido activa</p>
+                    <div class="precio">$249.99</div>
+                    <a href="carrito.html" class="btn">Agregar al Carrito</a>
+                </div>
+            </div>
+            
+            <!-- Producto 4: Smartwatch -->
+            <div class="producto-card">
+                <div class="producto-img">
+                    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=300&fit=crop" alt="Smartwatch Sport">
+                </div>
+                <div class="producto-info">
+                    <h3>Smartwatch Sport</h3>
+                    <p>Monitor de salud y fitness</p>
+                    <div class="precio">$349.99</div>
+                    <a href="carrito.html" class="btn">Agregar al Carrito</a>
+                </div>
+            </div>
+            
+            <!-- Producto 5: Monitor -->
+            <div class="producto-card">
+                <div class="producto-img">
+                    <img src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=400&h=300&fit=crop" alt="Monitor 4K 27">
+                </div>
+                <div class="producto-info">
+                    <h3>Monitor 4K 27"</h3>
+                    <p>Resolución Ultra HD, HDR</p>
+                    <div class="precio">$599.99</div>
+                    <a href="carrito.html" class="btn">Agregar al Carrito</a>
+                </div>
+            </div>
+            
+            <!-- Producto 6: Teclado -->
+            <div class="producto-card">
+                <div class="producto-img">
+                    <img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=400&h=300&fit=crop" alt="Teclado Mecánico">
+                </div>
+                <div class="producto-info">
+                    <h3>Teclado Mecánico RGB</h3>
+                    <p>Switches mecánicos, iluminación</p>
+                    <div class="precio">$129.99</div>
+                    <a href="carrito.html" class="btn">Agregar al Carrito</a>
+                </div>
+            </div>
+            
+            <!-- Producto 7: Mouse -->
+            <div class="producto-card">
+                <div class="producto-img">
+                    <img src="https://images.unsplash.com/photo-1527814050087-3793815479db?w=400&h=300&fit=crop" alt="Mouse Gaming Pro">
+                </div>
+                <div class="producto-info">
+                    <h3>Mouse Gaming Pro</h3>
+                    <p>16000 DPI, 8 botones programables</p>
+                    <div class="precio">$79.99</div>
+                    <a href="carrito.html" class="btn">Agregar al Carrito</a>
+                </div>
+            </div>
+            
+            <!-- Producto 8: Cámara -->
+            <div class="producto-card">
+                <div class="producto-img">
+                    <img src="https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=400&h=300&fit=crop" alt="Cámara Digital">
+                </div>
+                <div class="producto-info">
+                    <h3>Cámara Digital Pro</h3>
+                    <p>24MP, Video 4K, WiFi</p>
+                    <div class="precio">$1,499.99</div>
+                    <a href="carrito.html" class="btn">Agregar al Carrito</a>
+                </div>
+            </div>
+
+            <!-- Producto 9: Tablet -->
+            <div class="producto-card">
+                <div class="producto-img">
+                    <img src="https://images.unsplash.com/photo-1561154464-82e9adf32764?w=400&h=300&fit=crop" alt="Tablet Pro">
+                </div>
+                <div class="producto-info">
+                    <h3>Tablet Pro 12"</h3>
+                    <p>Pantalla OLED, 256GB, Stylus incluido</p>
+                    <div class="precio">$799.99</div>
+                    <a href="carrito.html" class="btn">Agregar al Carrito</a>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- ========== PIE DE PÁGINA ========== -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-copyright">
+                <p>&copy; 2025 TechStore. Todos los derechos reservados.</p>
+                <p>Quevedo, Ecuador</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

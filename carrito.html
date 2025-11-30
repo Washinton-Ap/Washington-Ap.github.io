@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Configuración básica del documento -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore - Carrito de Compras</title>
+    <!-- Enlace al archivo de estilos CSS -->
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <!-- ========== ENCABEZADO Y MENÚ DE NAVEGACIÓN ========== -->
+    <header>
+        <nav>
+            <!-- Logo de la tienda -->
+            <div class="logo">TechStore</div>
+            
+            <!-- Checkbox oculto para el menú hamburguesa -->
+            <input type="checkbox" id="menu-toggle">
+            
+            <!-- Icono del menú hamburguesa -->
+            <label for="menu-toggle" class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            
+            <!-- Lista de enlaces del menú -->
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="sobreNosotros.html">Sobre Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="carrito.html">Carrito (3)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ========== CARRITO DE COMPRAS ========== -->
+    <section class="container">
+        <h2>Tu Carrito de Compras</h2>
+        
+        <!-- Contenedor de productos en el carrito -->
+        <div class="carrito-contenido">
+            
+            <!-- ========== PRODUCTO 1 EN EL CARRITO ========== -->
+            <div class="carrito-item">
+                <!-- Información del producto -->
+                <div class="carrito-producto">
+                    <!-- Imagen miniatura del producto -->
+                    <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=100&h=80&fit=crop" alt="Laptop">
+                    <!-- Detalles del producto -->
+                    <div class="carrito-detalles">
+                        <h3>Laptop Pro 15"</h3>
+                        <p>Intel i7, 16GB RAM, 512GB SSD</p>
+                        <p class="cantidad">Cantidad: 1</p>
+                    </div>
+                </div>
+                <!-- Precio y acciones -->
+                <div class="carrito-acciones">
+                    <div class="precio">$1,299.99</div>
+                    <a href="#" class="eliminar">Eliminar</a>
+                </div>
+            </div>
+            
+            <!-- ========== PRODUCTO 2 EN EL CARRITO ========== -->
+            <div class="carrito-item">
+                <div class="carrito-producto">
+                    <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=100&h=80&fit=crop" alt="Smartphone">
+                    <div class="carrito-detalles">
+                        <h3>Smartphone X12</h3>
+                        <p>128GB, Cámara 48MP, 5G</p>
+                        <p class="cantidad">Cantidad: 1</p>
+                    </div>
+                </div>
+                <div class="carrito-acciones">
+                    <div class="precio">$899.99</div>
+                    <a href="#" class="eliminar">Eliminar</a>
+                </div>
+            </div>
+            
+            <!-- ========== PRODUCTO 3 EN EL CARRITO ========== -->
+            <div class="carrito-item">
+                <div class="carrito-producto">
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=100&h=80&fit=crop" alt="Auriculares">
+                    <div class="carrito-detalles">
+                        <h3>Auriculares Premium</h3>
+                        <p>Cancelación de ruido activa</p>
+                        <p class="cantidad">Cantidad: 1</p>
+                    </div>
+                </div>
+                <div class="carrito-acciones">
+                    <div class="precio">$249.99</div>
+                    <a href="#" class="eliminar">Eliminar</a>
+                </div>
+            </div>
+            
+        </div>
+        
+        <!-- ========== RESUMEN DEL CARRITO ========== -->
+        <div class="carrito-resumen">
+            <div class="carrito-total">
+                
+                <!-- Subtotal de productos -->
+                <div class="total-item">
+                    <span>Subtotal:</span>
+                    <span class="precio">$2,449.97</span>
+                </div>
+                
+                <!-- Costo de envío -->
+                <div class="total-item">
+                    <span>Envío:</span>
+                    <span class="envio-gratis">GRATIS</span>
+                </div>
+                
+                <!-- IVA (Impuesto al Valor Agregado) -->
+                <div class="total-item">
+                    <span>IVA (12%):</span>
+                    <span class="precio">$293.99</span>
+                </div>
+                
+                <!-- Total final a pagar -->
+                <div class="total-final">
+                    <span>Total:</span>
+                    <span class="precio-final">$2,743.96</span>
+                </div>
+                
+                <!-- Botones de acción -->
+                <div class="botones-carrito">
+                    <!-- Botón para seguir comprando -->
+                    <a href="productos.html" class="btn btn-secundario">Seguir Comprando</a>
+                    <!-- Botón para proceder al pago -->
+                    <a href="contacto.html" class="btn btn-pagar">Proceder al Pago</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PIE DE PÁGINA ========== -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-copyright">
+                <p>&copy; 2025 TechStore. Todos los derechos reservados.</p>
+                <p>Quevedo, Ecuador</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

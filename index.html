@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Configuración básica del documento -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore - Inicio</title>
+    <!-- Enlace al archivo de estilos CSS -->
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <!-- ========== ENCABEZADO Y MENÚ DE NAVEGACIÓN ========== -->
+    <header>
+        <nav>
+            <!-- Logo de la tienda -->
+            <div class="logo">TechStore</div>
+            
+            <!-- Checkbox oculto para el menú hamburguesa en móviles -->
+            <input type="checkbox" id="menu-toggle">
+            
+            <!-- Icono del menú hamburguesa (3 líneas) -->
+            <label for="menu-toggle" class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            
+            <!-- Lista de enlaces del menú -->
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="sobreNosotros.html">Sobre Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="carrito.html">Carrito (3)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ========== SECCIÓN PRINCIPAL (HERO) ========== -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Bienvenido a TechStore</h1>
+            <p>Los mejores productos tecnológicos al mejor precio</p>
+            <!-- Botón que lleva a la página de productos -->
+            <a href="productos.html" class="btn">Ver Productos</a>
+        </div>
+    </section>
+    
+    <!-- ========== PRODUCTOS DESTACADOS ========== -->
+    <section class="container">
+        <h2>Productos Destacados</h2>
+        
+        <!-- Grid de productos (se adapta automáticamente) -->
+        <div class="productos-grid">
+            
+            <!-- Tarjeta de producto 1 -->
+            <div class="producto-card">
+                <div class="producto-img">
+                    <!-- Imagen del producto -->
+                    <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400&h=300&fit=crop" alt="Laptop Pro 15">
+                </div>
+                <div class="producto-info">
+                    <h3>Laptop Pro 15"</h3>
+                    <p>Potente laptop para profesionales con procesador de última generación</p>
+                    <div class="precio">$1,299.99</div>
+                    <a href="carrito.html" class="btn">Agregar al Carrito</a>
+                </div>
+            </div>
+            
+            <!-- Tarjeta de producto 2 -->
+            <div class="producto-card">
+                <div class="producto-img">
+                    <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400&h=300&fit=crop" alt="Smartphone X12">
+                </div>
+                <div class="producto-info">
+                    <h3>Smartphone X12</h3>
+                    <p>Última generación en telefonía móvil con tecnología 5G</p>
+                    <div class="precio">$899.99</div>
+                    <a href="carrito.html" class="btn">Agregar al Carrito</a>
+                </div>
+            </div>
+            
+            <!-- Tarjeta de producto 3 -->
+            <div class="producto-card">
+                <div class="producto-img">
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=300&fit=crop" alt="Auriculares Premium">
+                </div>
+                <div class="producto-info">
+                    <h3>Auriculares Premium</h3>
+                    <p>Sonido de alta calidad con cancelación de ruido activa</p>
+                    <div class="precio">$249.99</div>
+                    <a href="carrito.html" class="btn">Agregar al Carrito</a>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- ========== PIE DE PÁGINA ========== -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-copyright">
+                <p>&copy; 2025 TechStore. Todos los derechos reservados.</p>
+                <p>Quevedo, Ecuador</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
