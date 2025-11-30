@@ -807,4 +807,36 @@ h2 {
    =================================== */
 
 @media (max-width: 480px) {
-    /* Hero aún
+    /* Hero aún más pequeño */
+    .hero {
+        padding: 60px 15px;
+    }
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+    .hero-content p {
+        font-size: 1rem;
+    }
+    /* Productos en una columna */
+    .productos-grid {
+        grid-template-columns: 1fr;
+    }
+    /*
+    Contenedor del carrito con menos margen */
+    .carrito-item {
+        padding: 16px;
+    }
+    .carrito-producto img {
+        width: 80px;
+        height: 60px;
+    }
+    /* Títulos más pequeños */
+    h2 {
+        font-size: 1.8rem;
+    }
+    /* Formularios con menos padding */
+    .formulario,
+    .info-contacto {
+        padding: 20px 15px;
+    }
+}
